@@ -142,6 +142,15 @@ print('Exercise 8:', product(2, 5, 5))
 #
 # Define the function and then call it below.
 
+def basic_calculator(num1, num2, operation):
 
+    calc_logic = {
+        "add": lambda: num1 + num2,
+        "subtract": lambda: num1 - num2,
+        "multiply": lambda: num1 * num2,
+        "divide": lambda: num1 / num2 if num2 != 0 else "Error"
+    }
+
+    return calc_logic[operation]()
 
 print('Exercise 9 Result:', basic_calculator(10, 5, "subtract"))
